@@ -19,7 +19,7 @@ Package.onUse(function(api) {
     'coffeescript',
     'practicalmeteor:loglevel@1.2.0_2',
     'practicalmeteor:chai@2.1.0_1',
-    'practicalmeteor:underscore-deep'
+    'practicalmeteor:underscore-deep@0.9.2'
   ]);
 
   api.addFiles('namespace.coffee');
