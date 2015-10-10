@@ -33,7 +33,7 @@ Package.onTest(function(api) {
     'practicalmeteor:mocha@2.1.0_3'
   ]);
 
-  api.use('easy-meteor-settings');
+  api.use('hubaaa:easy-meteor-settings@0.1.0');
 
   api.addFiles('EasyMeteorSettingsTest.coffee');
 });
