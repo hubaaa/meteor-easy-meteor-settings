@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'easy-meteor-settings',
-  version: '0.0.1',
+  name: 'hubaaa:easy-meteor-settings',
+  version: '0.1.0',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: "Easily read deep values from Meteor.settings using 'a.b.c'",
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
