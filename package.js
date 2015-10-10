@@ -1,10 +1,10 @@
 Package.describe({
   name: 'hubaaa:easy-meteor-settings',
-  version: '0.1.0',
+  version: '0.1.1',
   // Brief, one-line summary of the package.
   summary: "Easily read deep values from Meteor.settings using 'a.b.c'",
   // URL to the Git repository containing the source code for this package.
-  git: '',
+  git: 'https://github.com/hubaaa/meteor-easy-meteor-settings',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
@@ -33,7 +33,7 @@ Package.onTest(function(api) {
     'practicalmeteor:mocha@2.1.0_3'
   ]);
 
-  api.use('hubaaa:easy-meteor-settings@0.1.0');
+  api.use('hubaaa:easy-meteor-settings@0.1.1');
 
   api.addFiles('EasyMeteorSettingsTest.coffee');
 });
