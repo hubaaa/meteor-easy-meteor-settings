@@ -1,10 +1,10 @@
 Package.describe({
-  name: 'hubaaa:easy-meteor-settings',
-  version: '0.1.1',
+  name: 'practicalmeteor:easy-meteor-settings',
+  version: '0.1.2',
   // Brief, one-line summary of the package.
   summary: "Easily read deep values from Meteor.settings using 'a.b.c'",
   // URL to the Git repository containing the source code for this package.
-  git: 'https://github.com/hubaaa/meteor-easy-meteor-settings',
+  git: 'https://github.com/practicalmeteor/meteor-easy-meteor-settings',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
@@ -26,14 +26,26 @@ Package.onUse(function(api) {
   api.addFiles('EasyMeteorSettings.coffee');
 });
 
+// Package.onTest has the same API as Package.onUse
 Package.onTest(function(api) {
-  api.use([
-    'underscore',
-    'coffeescript',
-    'practicalmeteor:mocha@2.1.0_3'
-  ]);
+  // Add the package to test
+  api.use('practicalmeteor:easy-meteor-settings@0.1.2');
 
-  api.use('hubaaa:easy-meteor-settings@0.1.1');
+  // Add packages you want to use in your test
+  api.use(['underscore', 'coffeescript']);
 
+  // Add the mocha unit testing framework
+  api.use('practicalmeteor:mocha@2.1.0_7');
+
+  // To add the tinytest unit testing framework, use the following instead
+  // api.use('tinytest');
+
+  // Add the popular chai lib for advanced asserts
+  api.use('practicalmeteor:chai@2.1.0_1');
+
+  // Add the popular sinon lib for advanced test spies and stubs
+  api.use('practicalmeteor:sinon@1.14.1_2');
+
+  // Add the tests
   api.addFiles('EasyMeteorSettingsTest.coffee');
 });

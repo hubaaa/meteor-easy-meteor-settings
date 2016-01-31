@@ -1,11 +1,11 @@
-log = new ObjectLogger('hubaaa.EasyMeteorSettings')
+log = new ObjectLogger('practical.EasyMeteorSettings')
 
-class hubaaa.EasyMeteorSettings
+class practical.EasyMeteorSettings
 
   instance = null
 
   @get: ->
-    instance ?= new hubaaa.EasyMeteorSettings()
+    instance ?= new practical.EasyMeteorSettings()
 
   constructor: (@settings = Meteor.settings)->
     try
@@ -73,4 +73,6 @@ class hubaaa.EasyMeteorSettings
     finally
       log.return()
 
-@EasyMeteorSettings = hubaaa.EasyMeteorSettings.get()
+@EasyMeteorSettings = practical.EasyMeteorSettings.get()
+
+@MSettings = @EasyMeteorSettings

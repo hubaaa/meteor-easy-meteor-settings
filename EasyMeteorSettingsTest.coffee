@@ -1,25 +1,25 @@
 describe 'EasyMeteorSettings', ->
   describe 'getSetting', ->
-    it 'returns setting', ->
-      settings = new hubaaa.EasyMeteorSettings
+    it 'returns the setting', ->
+      settings = new practical.EasyMeteorSettings
         loglevel: 'debug'
 
       expect(settings.getSetting('loglevel')).to.equal 'debug'
 
-    it "returns public setting, if private one doesn't exist", ->
-      settings = new hubaaa.EasyMeteorSettings
+    it "returns the public setting, if the private one doesn't exist", ->
+      settings = new practical.EasyMeteorSettings
         public:
           loglevel: 'trace'
 
       expect(settings.getSetting('loglevel')).to.equal 'trace'
 
-    it 'returns defaultValue', ->
-      settings = new hubaaa.EasyMeteorSettings()
+    it "returns the defaultValue, if the setting doesn't exist", ->
+      settings = new practical.EasyMeteorSettings()
 
       expect(settings.getSetting('loglevel', 'info')).to.equal 'info'
 
-    it 'returns deep settings', ->
-      settings = new hubaaa.EasyMeteorSettings
+    it 'returns a deep setting', ->
+      settings = new practical.EasyMeteorSettings
         serviceConfigurations:
           github:
             apiKey: 'xxx'
@@ -27,7 +27,7 @@ describe 'EasyMeteorSettings', ->
       expect(settings.getSetting('serviceConfigurations.github.apiKey')).to.equal 'xxx'
 
   describe 'getPrivateSetting', ->
-    it 'returns setting', ->
+    it 'returns the setting', ->
 
       settingsObject =
         serviceConfigurations:
@@ -35,6 +35,6 @@ describe 'EasyMeteorSettings', ->
             apiKey: 'xxx'
             secret: 'yyy'
 
-      settings = new hubaaa.EasyMeteorSettings settingsObject
+      settings = new practical.EasyMeteorSettings settingsObject
 
       expect(settings.getSetting('serviceConfigurations')).to.deep.equal settingsObject.serviceConfigurations

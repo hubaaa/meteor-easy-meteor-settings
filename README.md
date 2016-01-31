@@ -1,4 +1,4 @@
-## hubaaa:easy-meteor-settings
+## practicalmeteor:easy-meteor-settings
 
 Easily read deep values from Meteor.settings using 'a.b.c'
 
@@ -23,3 +23,5 @@ EasyMeteorSettings.getRequiredPrivateSetting(name)
 
 EasyMeteorSettings.getRequiredPublicSetting(name)
 ```
+
+Alternatively, to save you typing, you can use MSettings instead, which is an alias for EasyMeteorSettings.
