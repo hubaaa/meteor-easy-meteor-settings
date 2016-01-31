@@ -5,12 +5,9 @@ language: node_js
 node_js:
   - "0.10.40"
 
-git:
-  submodules: false
-
-before_install:
+install:
   - "curl https://install.meteor.com | /bin/sh"
   - "npm install -g spacejam"
-  - export PATH="$HOME/.meteor:$PATH"
+  - "export PATH=$HOME/.meteor:$PATH"
 
-script: spacejam test-packages --driver-package=practicalmeteor:mocha-console-reporter ./
+script: "spacejam test-packages --driver-package=practicalmeteor:mocha-console-reporter ./"
