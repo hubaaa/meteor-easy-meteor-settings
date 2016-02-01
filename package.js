@@ -40,12 +40,15 @@ Package.onTest(function(api) {
   // To add the tinytest unit testing framework, use the following instead
   // api.use('tinytest');
 
-  // Add the popular chai lib for advanced asserts
+  // Add a proper logging library to escape debugging
+  api.use('practicalmeteor:loglevel@1.2.0_2');
+
+    // Add the popular chai lib for advanced asserts
   api.use('practicalmeteor:chai@2.1.0_1');
 
   // Add the popular sinon lib for advanced test spies and stubs
   api.use('practicalmeteor:sinon@1.14.1_2');
 
   // Add the tests
-  api.addFiles('EasyMeteorSettingsTest.coffee');
+  api.addFiles('EasyMeteorSettingsTest.js');
 });
